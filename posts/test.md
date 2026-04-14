@@ -1,3 +1,8 @@
+---
+foo: 1
+bar: 2
+abc: xyz
+---
 # Hello world
 
 ## Lorem
