@@ -1,4 +1,5 @@
 ---
+post_id: 'test'
 foo: 1
 bar: 2
 abc: xyz
@@ -28,3 +29,5 @@ $$ foo \frac{\infty}{\mathbb {R}} $$
 Hola que tal!
 </div>
 
+[foo](%link:foo%)
+[bar](%link:bar%)
