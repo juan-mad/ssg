@@ -75,7 +75,7 @@ def generate_internal_hyperlinks(file: pathlib.Path, public_files: dict):
     return warnings
            
 
-def generate_standalone_html(file: pathlib.Path, source_parent_dir: pathlib.Path, output_parent_dir: pathlib.Path -> pathlib.Path):
+def generate_standalone_html(file: pathlib.Path, source_parent_dir: pathlib.Path, output_parent_dir: pathlib.Path) -> pathlib.Path:
     """
     Create standalone HTML file from a Markdown file. Replicates the same folder structure present in source_parent_dir
     inside output_parent_dir.
