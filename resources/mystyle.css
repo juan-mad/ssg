@@ -42,8 +42,24 @@ html {
 
 body {
     background-color: var(--bg0);
-    color: var(--fg0)
+    color: var(--fg0);
+    /* 100% of viewport's height, i.e. browser window */
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: left;
 }
+
+/* for any direct child of the body tag*/
+body > * {
+    max-width: 42rem;
+    width: min(90vw, 42rem);
+}
+
 
 div {
     
