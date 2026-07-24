@@ -31,6 +31,13 @@ $styles.html()$
         $endif$
     </head>
     <body>
+        <!-- navigation bar -->
+        <nav class="site-nav">
+            <a href=%link:foo%>Foo</a>
+            <a href=%link:test%>Test</a>
+            <a href=%link:bar%>Bar</a>
+        </nav>
+            
         $for(include-before)$
         $include-before$
         $endfor$
