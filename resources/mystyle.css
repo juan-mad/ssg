@@ -66,8 +66,8 @@ html {
 }
 
 body {
-
     font-family: "Space Mono";
+    font-size: 15px;
     background-color: var(--bg0);
     color: var(--fg0);
     /* 100% of viewport's height, i.e. browser window */
@@ -87,6 +87,14 @@ body > * {
     width: min(90vw, 42rem);
 }
 
+a {
+    color: var(--aqua);
+}
+
+a:hover {
+    color: var(--aqua2);
+}
+
 
 div {
     
@@ -98,8 +106,8 @@ div {
     gap: 1rem;
     align-items: start;
     padding: 1rem;
-    background-color: var(--bg1);
-    border-bottom: 1px solid var(--bg3);
+    /* background-color: var(--bg1); */
+    /* border-bottom: 1px solid var(--bg3); */
 }
 
 .site-nav a{
