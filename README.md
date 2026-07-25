@@ -14,3 +14,4 @@ The script expects one `posts/` folder at the same level as the script. One HTML
 the post/page, and be used to generate hyperlinks from one page to another.
  - When linking to another post, one should write `[text of the hyperlink](%link:post_id%)`. The script will use regular expressions
 to find `%link:post_id%` and substitute it with the appropriate URL.
+ - To use custom colors (ones defined in the CSS file as variables), one can use `%C:colorname%text_to_be_colored%C%`.
