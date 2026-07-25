@@ -36,11 +36,38 @@
     --gray2: #a89984;
 }
 
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
 html {
     font-size: 20px;
 }
 
 body {
+
+    font-family: "Space Mono";
     background-color: var(--bg0);
     color: var(--fg0);
     /* 100% of viewport's height, i.e. browser window */
@@ -49,7 +76,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: left;
 }
@@ -69,7 +96,7 @@ div {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    align-items: center;
+    align-items: start;
     padding: 1rem;
     background-color: var(--bg1);
     border-bottom: 1px solid var(--bg3);
