@@ -39,6 +39,33 @@ def read_frontmatter(file: pathlib.Path):
 
 def get_relative_path(from_path: pathlib.Path, to_path: pathlib.Path) -> pathlib.Path:
     return to_path.relative_to(from_path.parent, walk_up=True)
+
+
+def parse_coloring(file: pathlib.Path):
+    """
+    Parses short custom color commands to HTML.
+    %C:colorname% TEXT %C%--> <span style="color: var(--colorname)"> TEXT </span>
+    """
+
+    pattern = re.compile(
+        r"%C:([^%]+)%(.*?)%C%",
+        flags=re.DOTALL,
+    )
+
+    def replace_color(match) -> str:
+        color_name = match.group(1)
+        text_to_change = match.group(2)
+
+        return f'<span style="color: var(--{color_name})">{text_to_change}</span>'
+
+    text = file.read_text(encoding="utf-8")
+
+    replaced_text, replacement_count = pattern.subn(
+        lambda m: replace_color(m), text
+    )
+
+    if replacement_count > 0:
+        file.write_text(replaced_text, encoding="utf-8")
     
 
 def generate_internal_hyperlinks(file: pathlib.Path, public_files: dict):
@@ -150,6 +177,7 @@ def main():
 
     # Parse internal hyperlinks
     for post_id, f in public_files.items():
+        parse_coloring(f)
         warnings = generate_internal_hyperlinks(f, public_files)
         if warnings:
             print(warnings)

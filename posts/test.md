@@ -13,7 +13,7 @@ keywords:
 
 ipsum
 
- - asd
+ - asd %C:aqua%asdsad dasdsa %C%%C:red2% asdasd %C%
  - asdsad
 
 ### adasd
