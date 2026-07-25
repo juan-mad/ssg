@@ -141,7 +141,7 @@ def generate_standalone_html(file: pathlib.Path, source_parent_dir: pathlib.Path
         # if they don't appear there, not sure. Refer to pandoc docs for this.
         "--template", "mytemplate.html",
         # Link to CSS style file. Multiple may be specified.
-        "--css", ".." / pathlib.Path("resources/mystyle.css").relative_to(relative_leaf_dir, walk_up=True),
+        "--css", pathlib.Path("resources/mystyle.css").relative_to(relative_leaf_dir, walk_up=True),
         str(file),  # input filename path
         "--output", str(output_file_path),
     ])

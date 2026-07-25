@@ -83,8 +83,8 @@ body {
 
 /* for any direct child of the body tag*/
 body > * {
-    max-width: 42rem;
-    width: min(90vw, 42rem);
+    max-width: 50rem;
+    width: min(90vw, 50rem);
 }
 
 a {
@@ -101,6 +101,7 @@ div {
 }
 
 .site-nav {
+    font-size: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
